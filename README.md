@@ -53,6 +53,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, auc, roc_curve
 ```
 ## Deployment
-![deployment]([URL](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/blob/main/images/1.png)
-![deployment]([URL](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/blob/main/images/2.png)
-![deployment]([URL](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/blob/main/images/3.png)
+![Deployment Image 1](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/raw/main/images/1.png)
+![Deployment Image 2](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/raw/main/images/2.png)
+![Deployment Image 3](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/raw/main/images/3.png)
+
