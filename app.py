@@ -38,7 +38,7 @@ def predict():
         else:
             prediction_result = "Good news! Your current assessment suggests no foreseeable risk of Coronary Heart Disease. Keep up the healthy habits and lifestyle."
     
-    return render_template('text.html', prediction_result=prediction_result)
+    return render_template('index.html', prediction_result=prediction_result)
 
 
 
