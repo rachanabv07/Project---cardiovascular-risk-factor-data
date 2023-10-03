@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-year Risk of Coronary Heart Disease Prediction</title>
+    <style>
+        body {
+            background-color: #333; /* Darker background color */
+           
+            text-align: left;
+            padding: 0px;
+            font-family: serif;
+            
+        }
+        #container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        background-image: linear-gradient(rgba(0.5, 0.5, 255, 0.5), rgba(255, 255, 0.5, 0.5)),
+                  url("https://cdn.mos.cms.futurecdn.net/pYF5YURHV2xggu6L2Dnjfb-970-80.jpg.webp");
+        background-size: cover;
+        background-position: center;
+        }
+        h1 {
+        text-align: center;
+        font-weight: bold;
+        }
+        h2 {
+        text-decoration: underline;
+        }
+        h1, h2, h3 {
+            color: #fff; /* Text color */
+        }
+        select, input[type="number"] {
+            width: 95%; /* Make dropdowns and number inputs full width */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff; /* Button background color */
+            color: #fff; /* Button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; /* Button background color on hover */
+        }
+        #prediction {
+            color: white;
+            margin-top: 20px;
+            text-align: center; /* Center-align the text */
+            padding: 10px; /* Add padding for better readability */
+            background-color: rgba(255, 255, 255, 0.1); /* Optionally, add a semi-transparent background color */
+            border-radius: 20px; /* Optionally, add rounded corners to the box */
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="prediction">{{ prediction_result }}</div>
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>10-year Risk of Coronary Heart Disease Prediction</h1>
+            <h2>Patient Behavioral Details</h2>
+            <h3>Age</h3>
+            <input name="age" type="number">
+            <h3>Gender</h3>
+            <select name="sex" id="sex" required="required">
+                <option value="F">Female</option>
+                <option value="M">Male</option>
+            </select>
+            <h3>Did you smoke?</h3>
+            <select name="is_smoking" id="smoke" required="required">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+            <h3>How many cigarettes per day? (If no entry 0)</h3>
+            <input name="cigsPerDay" required="required">
+            <h2>Patient Medical History Details</h2>
+            <h3>Whether or not the patient was on blood pressure medication?</h3>
+            <select name="BPMeds" id="yes/no" required="required">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+            <h3>Whether or not the patient had previously had a stroke?</h3>
+            <select name="PrevalentStroke" id="str" required="required">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+            <h3>Whether or not the patient was hypertensive?</h3>
+            <select name="PrevalentHyp" id="hyp" required="required">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+            <h3>Whether or not the patient had diabetes?</h3>
+            <select name="Diabetes" id="dia" required="required">
+                <option value="YES">Yes</option>
+                <option value="NO">No</option>
+            </select>
+            <h2>Patient Current Medical Details</h2>
+            <h3>Total Cholesterol Level</h3>
+            <input name="totChol" type="number">
+            <h3>Systolic Blood Pressure</h3>
+            <input name="sysBP" type="number">
+            <h3>Diastolic Blood Pressure</h3>
+            <input name="diaBP" type="number">
+            <h3>Body Mass Index (BMI)</h3>
+            <input name="BMI" type="number">
+            <h3>Heart Rate</h3>
+            <input name="heartRate" type="number">
+            <h3>Glucose Level</h3>
+            <input name="glucose" type="number">
+            <br><br>
+            <button type="submit"> CHD Predict</button>
+        </form>
+        
+    </div>
+</body>
+</html>
