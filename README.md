@@ -29,14 +29,17 @@
 
 ## SKills
 
-- Python
+- Python - 3.11
 - Pandas
 - Numpy
 - Matplotlib
 - scikit-learn
+- Treating missing values in dataset
 - Data visualization
 - Data Preprocessing
-- Treating missing values in dataset
+- Data Modeling
+- Framework - Flask
+- Frontend - HTML, CSS
 
 
 
@@ -50,7 +53,12 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.metrics import confusion_matrix, auc, roc_curve
+from flask import Flask, render_template, request
+import pickle
 ```
 ## Deployment
 ![Deployment Image 1](https://github.com/rachanabv07/Project---cardiovascular-risk-factor-data/raw/main/images/1.png)
